@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "test": "node --import tsx --test tests/**/*.test.ts",
     "lint": "next lint",
     "update-embeddings": "cross-env NODE_ENV=development tsx scripts/update-embeddings.ts",
     "load-data": "cross-env NODE_ENV=development tsx scripts/load-data.ts",

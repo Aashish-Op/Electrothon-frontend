@@ -10,7 +10,12 @@
 // Improved embedding function
 export async function getEmbedding(text: string): Promise<number[]> {
   try {
-    console.log("Generating embedding for:", text.substring(0, 50) + "...");
+    console.log(
+      "Generating embedding",
+      JSON.stringify({
+        charCount: text.length,
+      })
+    );
 
     // Normalize and tokenize the text
     const normalizedText = text
@@ -148,7 +153,12 @@ export async function findSimilarQuestions(
 ): Promise<{ question: string; answer: string } | null> {
   try {
     const normalizedQuestion = normalizeText(question);
-    console.log("Finding similar questions for:", normalizedQuestion);
+    console.log(
+      "Finding similar questions",
+      JSON.stringify({
+        charCount: normalizedQuestion.length,
+      })
+    );
 
     // TODO: Implement Firestore query for similar questions
     console.warn(
