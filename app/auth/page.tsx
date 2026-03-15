@@ -48,6 +48,16 @@ const navAccentClass =
 const VOICE_ASSISTANT_ENABLED =
   process.env.ENABLE_VOICE_ASSISTANT === "true";
 
+const clerkAuthAppearance = {
+  elements: {
+    footer: "hidden",
+    footerAction: "hidden",
+    footerActionText: "hidden",
+    footerActionLink: "hidden",
+    clerkBadgeBox: "hidden",
+  },
+};
+
 const LoadingSkeleton = () => (
   <div className="flex gap-3">
     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#eef2ff]">
@@ -490,9 +500,9 @@ export default function Home() {
             </div>
 
             {authMode === "signIn" ? (
-              <SignIn routing="hash" />
+              <SignIn routing="hash" appearance={clerkAuthAppearance} />
             ) : (
-              <SignUp routing="hash" />
+              <SignUp routing="hash" appearance={clerkAuthAppearance} />
             )}
 
             <Button
