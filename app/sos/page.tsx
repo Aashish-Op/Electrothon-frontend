@@ -70,10 +70,14 @@ export default function SosPage() {
                   className="rounded-full bg-[#111111] px-5 text-sm font-semibold text-white hover:bg-black"
                   asChild
                 >
-                  <Link href="/soon">
+                  <a
+                    href="https://drive.google.com/file/d/1fCtCuF0bbUKclohbLxkMm_pJoKQTLEOu/view?usp=drivesdk"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Get the app
                     <Download className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button
                   asChild
@@ -87,17 +91,17 @@ export default function SosPage() {
 
             <div className="flex flex-col items-center gap-4 rounded-[1.6rem] border border-[#e6dfd6] bg-white/90 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.08)]">
               <div className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                Scan to download
+                App QR
               </div>
               <div className="rounded-2xl border border-[#e5dfd5] bg-white p-4 shadow-inner">
                 <img
-                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><rect width='180' height='180' fill='%23f7f6f2'/><rect x='18' y='18' width='36' height='36' fill='%23111111'/><rect x='126' y='18' width='36' height='36' fill='%23111111'/><rect x='18' y='126' width='36' height='36' fill='%23111111'/><rect x='60' y='60' width='60' height='60' fill='%23111111'/><rect x='114' y='114' width='24' height='24' fill='%23111111'/></svg>"
+                  src="/appqr.jpg"
                   alt="Download SOS app QR"
-                  className="h-44 w-44 rounded-xl border border-[#ebe4da]"
+                  className="h-44 w-44 rounded-xl border border-[#ebe4da] object-cover"
                 />
               </div>
               <p className="text-xs text-slate-500 text-center">
-                Point your camera to download the MedConnect SOS app.
+                Scan the App QR to open the APK download page for MedConnect SOS.
               </p>
             </div>
           </div>
